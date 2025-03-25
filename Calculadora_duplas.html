@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Duplas</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container_box">
+        <div class="container_top">
+            <p>Conversor</p>
+        </div>
+        <div class="container_son1">
+            <div class="container_input">
+                <input type="text" placeholder="Insira um número" id="input_txt">
+                <button onclick="calc()">Converter</button>
+            </div>
+            <div class="container_calc">
+                <p>Octal:</p>
+                <div class="div_resposta">
+                <p id="octal" class="resposta"></p>
+                </div>
+                <p>Hexadecimal:</p>
+               <div class="div_resposta">
+                <p id="hexadecimal" class="resposta"></p>
+               </div>
+                <p>Binário:</p>
+                <div class="div_resposta">
+                <p id="binario" class="resposta"></p>
+                </div>
+             
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+<script>
+    function calc(){
+
+            var decimal = Number(input_txt.value);
+
+            octal.innerHTML = decimal.toString(8);
+            hexadecimal.innerHTML = decimal.toString(16);
+            binario.innerHTML = decimal.toString(2);
+    }
+</script>
