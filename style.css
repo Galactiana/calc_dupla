@@ -7,11 +7,11 @@
 body {
     margin: 0;
     padding: 40px;
-    height: 5%;
+    height: 428px;
     background-size: cover;
     background-image: url("pug_engracado.png");
     background-repeat: no-repeat;
-    background-position: top;
+    background-position:center;
 }
 
 .container_box{
@@ -63,6 +63,16 @@ input:focus{
     background-color: #ffffff;
     font-family: 'Xp', sans-serif;
 }
+#base_select{
+    border: 1px solid #7F9DB9;
+    background-color: #ffffff;
+    font-family: 'Xp', sans-serif;
+}
+select:focus{
+    outline: none;
+    font-family: 'Xp', sans-serif;
+}
+
 button:hover{
     border: 1px solid #003C74;
     border-radius: 2px;
@@ -86,4 +96,5 @@ button{
     height: 30px;
     overflow: hidden;
     border: 1px solid #7F9DB9;
+    background: aliceblue;
 }

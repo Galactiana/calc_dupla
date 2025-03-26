@@ -13,6 +13,12 @@
         <div class="container_son1">
             <div class="container_input">
                 <input type="text" placeholder="Insira um número" id="input_txt">
+                <select id="base_select">
+                    <option value="decimal">Decimal</option>
+                    <option value="binario">Binário</option>
+                    <option value="octal">Octal</option>
+                    <option value="hexadecimal">Hexadecimal</option>
+                </select>
                 <button onclick="calc()">Converter</button>
             </div>
             <div class="container_calc">
@@ -37,9 +43,42 @@
 </html>
 <script>
     function calc(){
-            var decimal = Number(input_txt.value);
-            octal.innerHTML = decimal.toString(8);
-            hexadecimal.innerHTML = decimal.toString(16);
-            binario.innerHTML = decimal.toString(2);
+        var input = document.getElementById('input_txt').value;
+    var base = document.getElementById('base_select').value;
+
+    // Verifica se a entrada está vazia
+    if (input === "") {
+        alert("Por favor, insira um número válido!");
+        return;
     }
+
+    // Converte a entrada para o formato decimal, dependendo da base escolhida
+    var decimal;
+
+    if (base === "decimal") {
+        decimal = parseInt(input, 10); // Converte de decimal para decimal (não há mudança)
+    } else if (base === "binario") {
+        decimal = parseInt(input, 2); // Converte de binário para decimal
+    } else if (base === "octal") {
+        decimal = parseInt(input, 8); // Converte de octal para decimal
+    } else if (base === "hexadecimal") {
+        decimal = parseInt(input, 16); // Converte de hexadecimal para decimal
+    }
+
+    // Verifica se a entrada não é um número válido
+    if (isNaN(decimal)) {
+        alert("Número inválido para a base selecionada!");
+        return;
+    }
+
+    // Realiza as conversões para outras bases
+    var octal = decimal.toString(8);
+    var hexadecimal = decimal.toString(16).toUpperCase(); // Para letras maiúsculas no hexadecimal
+    var binario = decimal.toString(2);
+
+    // Exibe os resultados nas respectivas áreas
+    document.getElementById('octal').innerHTML = octal;  // Adiciona o prefixo "0" para octal
+    document.getElementById('hexadecimal').innerHTML =  hexadecimal; // Prefixo "0x" para hexadecimal
+    document.getElementById('binario').innerHTML = binario; // Prefixo "0b" para binário
+}
 </script>
