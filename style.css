@@ -1,26 +1,35 @@
+@font-face {
+    font-family: 'Xp'; 
+    src: url('windows-xp-tahoma.ttf') format('truetype'); 
+    font-weight: normal; 
+    font-style: normal; 
+  }
 body {
     margin: 0;
     padding: 40px;
+    height: 5%;
     background-size: cover;
     background-image: url("pug_engracado.png");
     background-repeat: no-repeat;
+    background-position: top;
 }
 
 .container_box{
-    
-    width: 300px;
-    height: 400px;
-    background: linear-gradient(#5290F6,#296ee7,#296ee7, #296ee7,#1961DD,#1961DD,#1961DD, #0E68F1, #0258d0, #0249ac, #013276 );
+    background-image: url('container.png');
+    background-repeat: no-repeat;
     padding:5px;
     border-radius: 5px;
-    
-
+    background-size: cover;
+    width: 300px;
+    height: 300px;
 }
 .container_top {
+  
     width: 100%;
     height: 15px;
     margin-top: -15px;
-   
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .container_son1{
     flex-direction: column;
@@ -28,7 +37,8 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #ECE9D8;
-    height: 96%;
+    height: 90%;
+    margin-top: 10%;
     width: 100%;
     display: flex;
 }
@@ -41,22 +51,28 @@ body {
 .container_input{
     padding: 10px;
 }
-
+p{
+    font-family: 'Xp', sans-serif;
+}
 input:focus{
    outline: none;
+   font-family: 'Xp', sans-serif;
 }
 #input_txt{
     border: 1px solid #7F9DB9;
-    background-color: #F6F6F3;
+    background-color: #ffffff;
+    font-family: 'Xp', sans-serif;
 }
 button:hover{
     border: 1px solid #003C74;
     border-radius: 2px;
-    
+    font-family: 'Xp', sans-serif;
 }
 button{
     border: 1px solid #003C74;
     border-radius: 2px;
+    color: red;
+    font-family: 'Xp', sans-serif;
 }
 .resposta{
     margin-left: 4px;

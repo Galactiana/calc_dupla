@@ -9,9 +9,7 @@
 </head>
 <body>
     <div class="container_box">
-        <div class="container_top">
-            <p>Conversor</p>
-        </div>
+     
         <div class="container_son1">
             <div class="container_input">
                 <input type="text" placeholder="Insira um número" id="input_txt">
@@ -39,9 +37,7 @@
 </html>
 <script>
     function calc(){
-
             var decimal = Number(input_txt.value);
-
             octal.innerHTML = decimal.toString(8);
             hexadecimal.innerHTML = decimal.toString(16);
             binario.innerHTML = decimal.toString(2);
