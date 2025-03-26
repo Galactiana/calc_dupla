@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 40px;
+    background-size: cover;
+    background-image: url("pug_engracado.png");
+    background-repeat: no-repeat;
+}
+
+.container_box{
+    
+    width: 300px;
+    height: 400px;
+    background: linear-gradient(#5290F6,#296ee7,#296ee7, #296ee7,#1961DD,#1961DD,#1961DD, #0E68F1, #0258d0, #0249ac, #013276 );
+    padding:5px;
+    border-radius: 5px;
+    
+
+}
+.container_top {
+    width: 100%;
+    height: 15px;
+    margin-top: -15px;
+   
+}
+.container_son1{
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ECE9D8;
+    height: 96%;
+    width: 100%;
+    display: flex;
+}
+.container_calc{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container_input{
+    padding: 10px;
+}
+
+input:focus{
+   outline: none;
+}
+#input_txt{
+    border: 1px solid #7F9DB9;
+    background-color: #F6F6F3;
+}
+button:hover{
+    border: 1px solid #003C74;
+    border-radius: 2px;
+    
+}
+button{
+    border: 1px solid #003C74;
+    border-radius: 2px;
+}
+.resposta{
+    margin-left: 4px;
+}
+
+.div_resposta{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 200px;
+    height: 30px;
+    overflow: hidden;
+    border: 1px solid #7F9DB9;
+}
