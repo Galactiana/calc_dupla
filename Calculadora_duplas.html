@@ -44,7 +44,7 @@
 <script>
     function calc(){
         var input = document.getElementById('input_txt').value;
-    var base = document.getElementById('base_select').value;
+        var base = document.getElementById('base_select').value;
 
     // Verifica se a entrada está vazia
     if (input === "") {
@@ -73,12 +73,12 @@
 
     // Realiza as conversões para outras bases
     var octal = decimal.toString(8);
-    var hexadecimal = decimal.toString(16).toUpperCase(); // Para letras maiúsculas no hexadecimal
+    var hexadecimal = decimal.toString(16).toUpperCase(); // toUpperCase Para letras maiúsculas no hexadecimal
     var binario = decimal.toString(2);
 
     // Exibe os resultados nas respectivas áreas
-    document.getElementById('octal').innerHTML = octal;  // Adiciona o prefixo "0" para octal
-    document.getElementById('hexadecimal').innerHTML =  hexadecimal; // Prefixo "0x" para hexadecimal
-    document.getElementById('binario').innerHTML = binario; // Prefixo "0b" para binário
+    document.getElementById('octal').innerHTML = octal;  
+    document.getElementById('hexadecimal').innerHTML =  hexadecimal; 
+    document.getElementById('binario').innerHTML = binario; 
 }
 </script>
